@@ -1,0 +1,10 @@
+# ..... Common requirements for a Python project
+pandas
+numpy
+requests
+python-dotenv
+
+# ..... Requirements for mkdocs
+mkdocs-material
+
+# ..... Requirements for OpenAI

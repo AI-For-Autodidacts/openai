@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "headline": "OpenAI Sandbox",
+    "subheading": "Learn OpenAI by experimenting with real examples, comprehensive guides, and hands-on tutorials.",
+    "description": "Explore the power of artificial intelligence through practical examples, API integrations, and step-by-step learning paths designed for developers and AI enthusiasts.",
+    "buttons": [
+      {
+        "text": "Get Started",
+        "url": "/getting-started/quick-start/",
+        "type": "primary"
+      },
+      {
+        "text": "View Examples",
+        "url": "/examples/basic/",
+        "type": "secondary"
+      }
+    ],
+    "background": {
+      "type": "gradient",
+      "colors": ["#1e3a8a", "#3b82f6", "#06b6d4"]
+    }
+  },
+  "cards": [
+    {
+      "title": "Quick Start Guide",
+      "description": "Get up and running with OpenAI APIs in minutes. Learn the basics with simple, practical examples.",
+      "icon": "🚀",
+      "link": "/getting-started/quick-start/",
+      "category": "getting-started"
+    },
+    {
+      "title": "API Reference",
+      "description": "Complete documentation for all OpenAI endpoints, authentication, and best practices.",
+      "icon": "📚",
+      "link": "/api/overview/",
+      "category": "reference"
+    },
+    {
+      "title": "Code Examples",
+      "description": "Real-world examples and code snippets you can copy, paste, and adapt for your projects.",
+      "icon": "💻",
+      "link": "/examples/basic/",
+      "category": "examples"
+    },
+    {
+      "title": "Best Practices",
+      "description": "Learn proven strategies for prompt engineering, error handling, and performance optimization.",
+      "icon": "⭐",
+      "link": "/guides/best-practices/",
+      "category": "guides"
+    },
+    {
+      "title": "Developer Tools",
+      "description": "Essential tools and utilities to streamline your AI development workflow.",
+      "icon": "🛠️",
+      "link": "/guides/developer-guide/",
+      "category": "tools"
+    },
+    {
+      "title": "Community",
+      "description": "Join our community of AI developers. Share ideas, get help, and collaborate on projects.",
+      "icon": "👥",
+      "link": "/about/contributing/",
+      "category": "community"
+    }
+  ],
+  "features": {
+    "title": "Why Choose OpenAI Sandbox?",
+    "subtitle": "Everything you need to master OpenAI development",
+    "items": [
+      {
+        "title": "Hands-on Learning",
+        "description": "Learn by doing with interactive examples and real code you can run immediately."
+      },
+      {
+        "title": "Production Ready",
+        "description": "All examples follow industry best practices and are ready for production use."
+      },
+      {
+        "title": "Always Updated",
+        "description": "Stay current with the latest OpenAI features and API changes."
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "title": "Documentation",
+        "items": [
+          { "text": "Getting Started", "url": "/getting-started/" },
+          { "text": "API Reference", "url": "/api/" },
+          { "text": "Examples", "url": "/examples/" },
+          { "text": "Guides", "url": "/guides/" }
+        ]
+      },
+      {
+        "title": "Community",
+        "items": [
+          { "text": "GitHub", "url": "https://github.com/ai-for-autodidacts/openai" },
+          { "text": "Contributing", "url": "/about/contributing/" },
+          { "text": "Changelog", "url": "/about/changelog/" },
+          { "text": "License", "url": "/about/license/" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "items": [
+          { "text": "OpenAI Platform", "url": "https://platform.openai.com/" },
+          { "text": "API Keys", "url": "https://platform.openai.com/api-keys" },
+          { "text": "Usage Dashboard", "url": "https://platform.openai.com/usage" },
+          { "text": "Documentation", "url": "https://platform.openai.com/docs" }
+        ]
+      }
+    ],
+    "social": [
+      {
+        "platform": "github",
+        "url": "https://github.com/ai-for-autodidacts/openai",
+        "icon": "github"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com/yourusername",
+        "icon": "twitter"
+      }
+    ],
+    "copyright": "© 2025 Nitya Narasimhan. All rights reserved.",
+    "description": "OpenAI Sandbox - Learn AI development through practical examples and comprehensive guides."
+  }
+}

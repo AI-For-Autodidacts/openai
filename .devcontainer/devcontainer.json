@@ -1,0 +1,23 @@
+{
+  "name": "Python Universal Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:2",
+
+  "customizations": {
+
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+
+      "settings": {
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.testing.pytestEnabled": true
+      }
+    }
+  },
+  
+  "postCreateCommand": "/bin/bash -lc 'if [ -f requirements.txt ]; then python -m pip install --upgrade pip && pip install -r requirements.txt; fi'",
+  "remoteUser": "root"
+}

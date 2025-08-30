@@ -1,0 +1,413 @@
+/* Custom styles for peacock gradient theme */
+:root {
+  --peacock-deep-blue: #0f4c75;
+  --peacock-ocean-blue: #3282b8;
+  --peacock-teal: #14a085;
+  --peacock-bright-teal: #26c6da;
+  --peacock-bright-cyan: #4fc3f7;
+  --peacock-light-cyan: #4dd0e1;
+}
+
+/* Header and navigation styling with peacock gradient */
+.md-header {
+  background: linear-gradient(135deg, var(--peacock-deep-blue) 0%, var(--peacock-ocean-blue) 50%, var(--peacock-teal) 100%) !important;
+  box-shadow: 0 4px 12px rgba(15, 76, 117, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+/* Add padding to non-home pages for separation from nav bar */
+.md-main__inner:not(.homepage) {
+  padding-top: 2rem !important;
+}
+
+/* Ensure proper spacing for all non-home content */
+.md-content:not(.homepage) {
+  padding-top: 1.5rem !important;
+}
+
+/* Additional spacing for article content on non-home pages */
+.md-content__inner:not(.homepage) {
+  padding-top: 1rem !important;
+}
+
+/* Header title styling */
+.md-header__title {
+  color: #ffffff !important;
+}
+
+/* Logo styling for better visibility */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  margin: 0.25rem !important;
+}
+
+.md-header__button.md-logo {
+  padding: 0.2rem !important;
+}
+
+/* Navigation links in header */
+.md-header-nav__button {
+  color: #ffffff !important;
+}
+
+.md-header-nav__button:hover {
+  color: var(--peacock-light-cyan) !important;
+}
+
+/* Search bar styling */
+.md-search__input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Mobile navigation and responsive styling */
+/* Mobile header drawer toggle */
+.md-header__button.md-icon {
+  color: #ffffff !important;
+}
+
+.md-header__button.md-icon:hover {
+  color: var(--peacock-light-cyan) !important;
+}
+
+/* Mobile navigation drawer - theme aware */
+.md-nav--primary {
+  background: linear-gradient(180deg, var(--peacock-deep-blue) 0%, var(--peacock-ocean-blue) 100%) !important;
+}
+
+/* Mobile navigation links - theme aware */
+.md-nav--primary .md-nav__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.md-nav--primary .md-nav__link {
+  color: #ffffff !important;
+  padding: 1rem !important;
+}
+
+.md-nav--primary .md-nav__link:hover,
+.md-nav--primary .md-nav__link:focus {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--peacock-light-cyan) !important;
+}
+
+/* Mobile navigation title */
+.md-nav__title {
+  background: var(--peacock-deep-blue) !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Mobile navigation back button */
+.md-nav__button {
+  color: #ffffff !important;
+}
+
+/* CLEAN mobile sidebar fixes - single peacock background, no gradients */
+@media screen and (max-width: 76.1875em) {
+  /* Single clean peacock background - no gradients */
+  * .md-nav--primary,
+  * [data-md-color-scheme="default"] .md-nav--primary,
+  * [data-md-color-scheme="slate"] .md-nav--primary,
+  .md-nav--primary,
+  [data-md-color-scheme="default"] .md-nav--primary,
+  [data-md-color-scheme="slate"] .md-nav--primary,
+  html * .md-nav--primary,
+  html * [data-md-color-scheme="default"] .md-nav--primary {
+    background: #0f4c75 !important;
+    background-color: #0f4c75 !important;
+    background-image: none !important;
+  }
+
+  /* Clean white text */
+  * .md-nav--primary *,
+  * .md-nav--primary .md-nav__link,
+  * .md-nav--primary a,
+  * .md-nav--primary .md-nav__item .md-nav__link,
+  * [data-md-color-scheme="default"] .md-nav--primary *,
+  * [data-md-color-scheme="default"] .md-nav--primary .md-nav__link,
+  * [data-md-color-scheme="default"] .md-nav--primary a,
+  .md-nav--primary *,
+  .md-nav--primary .md-nav__link,
+  .md-nav--primary a,
+  .md-nav--primary .md-nav__item .md-nav__link,
+  [data-md-color-scheme="default"] .md-nav--primary *,
+  [data-md-color-scheme="default"] .md-nav--primary .md-nav__link,
+  [data-md-color-scheme="default"] .md-nav--primary a {
+    color: #ffffff !important;
+  }
+
+  /* Single clean peacock background for sidebar container */
+  * .md-sidebar--primary,
+  * .md-sidebar--primary *,
+  .md-sidebar--primary,
+  .md-sidebar--primary .md-sidebar__scrollwrap,
+  [data-md-color-scheme="default"] .md-sidebar--primary,
+  [data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap {
+    background: #0f4c75 !important;
+    background-color: #0f4c75 !important;
+    background-image: none !important;
+  }
+
+  /* Single clean peacock background for navigation elements */
+  * .md-nav__title,
+  * .md-nav__button,
+  .md-nav__title,
+  .md-nav__button,
+  [data-md-color-scheme="default"] .md-nav__title,
+  [data-md-color-scheme="default"] .md-nav__button {
+    background: #0f4c75 !important;
+    background-color: #0f4c75 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+  }
+}
+
+/* Additional mobile navigation enhancements - MOBILE ONLY */
+@media screen and (max-width: 76.1875em) {
+  /* Nested navigation items with proper indentation */
+  .md-nav--primary .md-nav .md-nav__item .md-nav__link {
+    padding-left: 2rem !important;
+  }
+
+  .md-nav--primary .md-nav .md-nav__item .md-nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+}
+
+/* Desktop sidebar fixes - prevent unwanted backgrounds and fix text colors */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary .md-nav__item:first-child {
+    background: transparent !important;
+  }
+  
+  .md-nav--primary .md-nav__item {
+    background: transparent !important;
+  }
+  
+  .md-nav--primary {
+    background: transparent !important;
+  }
+  
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    background: transparent !important;
+  }
+  
+  /* Fix text colors for desktop sidebar - use default theme colors */
+  .md-nav--primary .md-nav__link {
+    color: var(--md-default-fg-color) !important;
+  }
+  
+  .md-nav--primary .md-nav__link:hover {
+    color: var(--md-accent-fg-color) !important;
+  }
+  
+  .md-nav--primary .md-nav__title {
+    color: var(--md-default-fg-color) !important;
+    background: transparent !important;
+  }
+  
+  .md-nav__button {
+    color: var(--md-default-fg-color) !important;
+  }
+}
+
+/* Ensure mobile overlay maintains theme */
+@media screen and (max-width: 76.1875em) {
+  .md-overlay {
+    background-color: rgba(15, 76, 117, 0.5) !important;
+  }
+  
+  /* Mobile header consistency */
+  .md-header {
+    background: linear-gradient(135deg, var(--peacock-deep-blue) 0%, var(--peacock-ocean-blue) 50%, var(--peacock-teal) 100%) !important;
+  }
+}
+
+/* Button hover contrast fixes */
+/* Ensure all buttons with dark hover backgrounds have white text */
+.md-button:hover,
+.md-button--primary:hover,
+.md-button--secondary:hover,
+button:hover,
+[role="button"]:hover {
+  color: #ffffff !important;
+}
+
+/* Material Design button hover fixes */
+.md-typeset .md-button:hover {
+  color: #ffffff !important;
+  background-color: var(--peacock-deep-blue) !important;
+}
+
+.md-typeset .md-button--primary:hover {
+  color: #ffffff !important;
+  background-color: var(--peacock-deep-blue) !important;
+}
+
+/* Homepage specific button fixes */
+.btn-gradient-hover:hover {
+  color: #ffffff !important;
+}
+
+.feature-link:hover {
+  color: var(--peacock-bright-cyan) !important;
+}
+
+/* MkDocs Material theme button overrides */
+.md-content .md-button:hover,
+.md-content .md-button--primary:hover,
+.md-main .md-button:hover,
+.md-main .md-button--primary:hover {
+  color: #ffffff !important;
+  background-color: var(--peacock-deep-blue) !important;
+}
+
+/* Any link or button that gets a dark background on hover */
+a:hover[style*="background"],
+button:hover[style*="background"],
+.md-button:hover[style*="background"] {
+  color: #ffffff !important;
+}
+
+/* Force white text on buttons and links with dark hover states */
+[style*="background-color"]:hover,
+[class*="hover"]:hover,
+[class*="btn"]:hover,
+.md-button:not(.md-button--primary):hover {
+  color: #ffffff !important;
+}
+
+/* Ultimate button hover fix - catches all possible buttons */
+/* This should override any Material Design defaults */
+html body .md-typeset a.md-button:hover,
+html body .md-typeset button:hover,
+html body a[class*="btn"]:hover,
+html body button[class*="btn"]:hover,
+html body [role="button"]:hover,
+html body .md-button:hover {
+  color: #ffffff !important;
+  background-color: #2c3e50 !important;
+}
+
+/* Page content padding for non-home pages */
+/* Target pages that are not the homepage for proper spacing */
+body:not([data-md-url*="/#"]) .md-main__inner,
+body:not([data-md-url="/"]) .md-main__inner {
+  padding-top: 2rem !important;
+}
+
+/* Alternative approach - target all content except homepage template */
+.md-content:not(.homepage-content) {
+  padding-top: 1.5rem !important;
+}
+
+/* Ensure consistent spacing for article content */
+article.md-content__inner {
+  margin-top: 1rem !important;
+}
+
+/* Mobile responsive padding adjustments */
+@media screen and (max-width: 76.1875em) {
+  body:not([data-md-url*="/#"]) .md-main__inner,
+  body:not([data-md-url="/"]) .md-main__inner {
+    padding-top: 1.5rem !important;
+  }
+  
+  .md-content:not(.homepage-content) {
+    padding-top: 1rem !important;
+  }
+}
+
+/* Generic dark background hover fix */
+*[style*="background"][style*="hover"]:hover,
+*:hover[style*="background-color: #000"],
+*:hover[style*="background-color: black"],
+*:hover[style*="background: #000"],
+*:hover[style*="background: black"] {
+  color: #ffffff !important;
+}
+
+/* Table of Contents styling with peacock gradient and shadow - compact version */
+.md-sidebar--secondary .md-nav__title {
+  background: linear-gradient(135deg, var(--peacock-deep-blue) 0%, var(--peacock-ocean-blue) 50%, var(--peacock-teal) 100%) !important;
+  color: #ffffff !important;
+  padding: 0.6rem 0.8rem !important;
+  margin: 0 0 0.5rem 0 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 6px rgba(15, 76, 117, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  font-weight: 500 !important;
+  font-size: 0.8rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Subtle animation effect to Table of Contents */
+.md-sidebar--secondary .md-nav__title::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
+  transition: left 0.5s ease !important;
+}
+
+.md-sidebar--secondary .md-nav__title:hover::before {
+  left: 100% !important;
+}
+
+/* Style the Table of Contents list items - more compact */
+.md-sidebar--secondary .md-nav__list {
+  padding-left: 0.25rem !important;
+}
+
+.md-sidebar--secondary .md-nav__item {
+  margin-bottom: 0.15rem !important;
+}
+
+.md-sidebar--secondary .md-nav__link {
+  padding: 0.3rem 0.5rem !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.85rem !important;
+}
+
+.md-sidebar--secondary .md-nav__link:hover {
+  background-color: rgba(15, 76, 117, 0.1) !important;
+  color: var(--peacock-deep-blue) !important;
+  transform: translateX(2px) !important;
+}
+
+/* Hero title margin reduction */
+.hero-title {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Hero section general spacing adjustments */
+.hero-section {
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-section h1.hero-title {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Hero subtitle spacing */
+.hero-subtitle {
+  margin-top: 0.25rem !important;
+  margin-bottom: 1rem !important;
+}

@@ -1,0 +1,89 @@
+{
+  "cards": {
+    "title": "What You'll Find Here",
+    "layout": {
+      "containerClass": "grid grid-cols-2 stagger-children",
+      "cardClass": "card hover-lift"
+    },
+    "items": [
+      {
+        "id": "quick-start",
+        "title": "1. Quick Start Guide",
+        "content": "Get up and running with OpenAI APIs in minutes. Step-by-step instructions for installation, setup, and your first API call.",
+        "button": {
+          "text": "Start Building",
+          "href": "getting-started/quick-start/",
+          "type": "primary"
+        }
+      },
+      {
+        "id": "guides",
+        "title": "2. Comprehensive Guides",
+        "content": "Deep dive into advanced features with detailed tutorials, best practices, and real-world examples.",
+        "button": {
+          "text": "Explore Guides",
+          "href": "guides/user-guide/",
+          "type": "primary"
+        }
+      },
+      {
+        "id": "api-reference",
+        "title": "3. API Reference",
+        "content": "Complete documentation of all endpoints, parameters, and response formats. Everything you need for integration.",
+        "button": {
+          "text": "View API Docs",
+          "href": "api/overview/",
+          "type": "primary"
+        }
+      },
+      {
+        "id": "examples",
+        "title": "4. Examples & Tutorials",
+        "content": "Learn from practical examples and step-by-step tutorials covering common use cases and advanced implementations.",
+        "button": {
+          "text": "See Examples",
+          "href": "examples/basic/",
+          "type": "primary"
+        }
+      },
+      {
+        "id": "community",
+        "title": "5. Community & Support",
+        "content": "Join our vibrant community, get help from experts, and contribute to the ecosystem with discussions and feedback.",
+        "button": {
+          "text": "Join Community",
+          "href": "about/contributing/",
+          "type": "primary"
+        }
+      }
+    ]
+  },
+  "footer": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Choose your path and start building amazing AI applications today.",
+    "layout": {
+      "containerClass": "text-center mt-xl",
+      "buttonsClass": "flex gap-4 justify-center flex-wrap"
+    },
+    "buttons": [
+      {
+        "id": "installation",
+        "text": "Installation Guide",
+        "href": "getting-started/installation/",
+        "type": "primary"
+      },
+      {
+        "id": "api-reference-footer",
+        "text": "API Reference",
+        "href": "api/overview/",
+        "type": "secondary"
+      },
+      {
+        "id": "examples-footer",
+        "text": "View Examples",
+        "href": "examples/basic/",
+        "type": "default"
+      }
+    ]
+  }
+}
