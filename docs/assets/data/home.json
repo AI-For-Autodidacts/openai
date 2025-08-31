@@ -65,20 +65,20 @@
     }
   ],
   "features": {
-    "title": "Why Choose OpenAI Sandbox?",
-    "subtitle": "Everything you need to master OpenAI development",
+    "title": "How To Use This Sandbox",
+    "subtitle": "Learn by building, breaking & fixing code!",
     "items": [
       {
-        "title": "Hands-on Learning",
-        "description": "Learn by doing with interactive examples and real code you can run immediately."
+        "title": "Run & Explore",
+        "description": "Understand the concepts by loading and running an existing notebook"
       },
       {
-        "title": "Production Ready",
-        "description": "All examples follow industry best practices and are ready for production use."
+        "title": "Extend & Learn",
+        "description": "Customize the notebook by modifying cells or adding new ones - build intuition"
       },
       {
-        "title": "Always Updated",
-        "description": "Stay current with the latest OpenAI features and API changes."
+        "title": "Experiment & Discover",
+        "description": "Treat notebooks as code-first playgrounds - try new ideas quickly"
       }
     ]
   },

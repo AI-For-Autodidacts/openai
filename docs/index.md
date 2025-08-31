@@ -7,4 +7,3 @@ hide:
 
 # OpenAI Sandbox
 
-Welcome to your custom Starlight-style homepage!

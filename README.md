@@ -2,7 +2,7 @@
 
 # OpenAI For Autodidacts
 
-A collection of hands-on learning labs and exercises for exploring OpenAI APIs and AI development concepts.
+A collection of Run & Explore labs and exercises for exploring OpenAI APIs and AI development concepts.
 
 ![Python](https://img.shields.io/badge/Python-3.7+-green)
 ![OpenAI](https://img.shields.io/badge/OpenAI-API-blue)

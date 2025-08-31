@@ -2,9 +2,14 @@
 pandas
 numpy
 requests
+
+# ..... Working with notebooks
 python-dotenv
+IPython
+ipykernel
 
 # ..... Requirements for mkdocs
 mkdocs-material
 
 # ..... Requirements for OpenAI
+openai
