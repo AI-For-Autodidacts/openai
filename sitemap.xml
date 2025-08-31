@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/1-quickstart/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/2-model-inference/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/3-model-customization/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/4-model-evaluation/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/5-agentic-ai/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://ai-for-autodidacts.github.io/openai/6-advanced-topics/</loc>
+         <lastmod>2025-08-31</lastmod>
+    </url>
+</urlset>

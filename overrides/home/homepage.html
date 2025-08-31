@@ -1,0 +1,551 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="starlight-homepage">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h2 class="hero-title">
+          <span id="typewriter-text">OpenAI</span><span id="typewriter-cursor">|</span>
+        </h2>
+        <p class="hero-subtitle">Learn OpenAI by experimenting with real examples, comprehensive guides, and hands-on tutorials.</p>
+        
+        <div class="hero-actions">
+          <a href="/openai/1-quickstart/" class="hero-btn btn-gradient-hover hero-btn-primary">
+            Get Started
+          </a>
+          <a href="/openai/2-model-inference/" class="hero-btn btn-gradient-hover hero-btn-secondary">
+            View Examples
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Cards Section -->
+  <section class="features">
+    <div class="features-container">
+      <div class="features-grid" id="features-grid">
+        <!-- Cards will be loaded via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Features Section -->
+  <section class="highlights">
+    <div class="highlights-container">
+      <div class="highlights-header">
+        <h2>How To Use This Sandbox</h2>
+        <p>Learn by building, breaking & fixing code!</p>
+      </div>
+      <div class="highlights-grid" id="highlights-grid">
+        <!-- Highlights will be loaded via JavaScript -->
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Starlight-inspired CSS -->
+<style>
+  /* Reset and base styles for homepage */
+  .starlight-homepage {
+    margin: 0;
+    padding: 0;
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+  }
+
+  /* Hero Section - Clean design with typewriter */
+  .hero {
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    padding: 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 7.5vw, 6.5rem) !important;
+    font-weight: 900;
+    margin: 0 0 0.15rem;
+    padding: 0;
+    line-height: 1.05;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: clamp(4rem, 8vw, 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive typewriter text sizing */
+  #typewriter-text {
+    font-size: clamp(1.5rem, 4.5vw, 5.5rem) !important;
+    background: linear-gradient(135deg, 
+      #0f4c75 0%,    /* Deep blue */
+      #4fc3f7 20%,   /* Bright cyan */
+      #3282b8 35%,   /* Ocean blue */
+      #26c6da 50%,   /* Bright teal */
+      #14a085 65%,   /* Teal */
+      #16537e 80%,   /* Navy blue */
+      #4dd0e1 90%,   /* Light cyan accent */
+      #0e4b99 100%   /* Royal blue */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 900;
+    line-height: 1.05;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90vw;
+  }
+
+  /* Typewriter cursor with enhanced visibility */
+  #typewriter-cursor {
+    color: #14a085;
+    font-weight: 400;
+    font-size: 0.9em;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    position: relative;
+    background: transparent;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  /* Generic gradient hover effect - reusable across site */
+  .btn-gradient-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-gradient-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, 
+      #0f4c75 0%,    /* Deep blue */
+      #3282b8 25%,   /* Ocean blue */
+      #14a085 50%,   /* Teal */
+      #16537e 75%,   /* Navy blue */
+      #0e4b99 100%   /* Royal blue */
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+  }
+
+  .btn-gradient-hover:hover {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-gradient-hover:hover::before {
+    background: linear-gradient(135deg, #14a085, #3282b8);
+  }
+
+  .hero-btn-primary {
+    color: #14a085 !important;
+  }
+
+  .hero-btn-secondary {
+    color: #14a085 !important;
+  }
+
+  /* Ensure colors work in both light and dark modes */
+  [data-md-color-scheme="default"] .hero-btn-primary {
+    color: #14a085 !important;
+  }
+
+  [data-md-color-scheme="default"] .hero-btn-secondary {
+    color: #14a085 !important;
+  }
+
+  [data-md-color-scheme="slate"] .hero-btn-primary {
+    color: #14a085 !important;
+  }
+
+  [data-md-color-scheme="slate"] .hero-btn-secondary {
+    color: #14a085 !important;
+  }
+
+  /* Features Section */
+  .features {
+    padding: 3rem 1rem;
+    background: var(--md-default-bg-color);
+  }
+
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .feature-card {
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--md-primary-fg-color);
+  }
+
+  .feature-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--md-default-fg-color);
+  }
+
+  .feature-description {
+    margin: 0 0 1.5rem;
+    color: var(--md-default-fg-color--light);
+    line-height: 1.6;
+  }
+
+  .feature-link {
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+
+  /* Dark mode contrast improvement for feature links */
+  [data-md-color-scheme="slate"] .feature-link {
+    color: #4fc3f7 !important;
+  }
+
+  .feature-link:hover {
+    text-decoration: none;
+    transform: translateX(4px);
+  }
+
+  /* Enhanced hover state for better visibility */
+  [data-md-color-scheme="slate"] .feature-link:hover {
+    color: #14a085 !important;
+  }
+
+  /* Highlights Section */
+  .highlights {
+    padding: 3rem 1rem;
+    background: var(--md-code-bg-color);
+  }
+
+  .highlights-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .highlights-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--md-default-fg-color);
+  }
+
+  .highlights-header p {
+    font-size: 1.125rem;
+    color: var(--md-default-fg-color--light);
+    margin: 0 0 3rem;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .highlight-item {
+    text-align: left;
+  }
+
+  .highlight-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--md-default-fg-color);
+  }
+
+  .highlight-item p {
+    color: var(--md-default-fg-color--light);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 0;
+    }
+    
+    .features {
+      padding: 2rem 1rem;
+    }
+    
+    .highlights {
+      padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+      font-size: clamp(2.8rem, 10vw, 4.5rem) !important;
+      margin: 0 0 0.15rem;
+      padding: 0;
+      line-height: 1.05;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
+      margin: 0 0 1rem;
+      padding: 0;
+      line-height: 1.3;
+    }
+    
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.875rem;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Homepage enhancements with JSON data loading and typewriter
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Starlight-style homepage loaded');
+    
+    // Initialize typewriter effect
+    initTypewriter();
+    
+    // Load and render home.json data
+    fetch('/openai/assets/data/home.json')
+      .then(response => response.json())
+      .then(data => {
+        renderFeatureCards(data.cards || []);
+        renderHighlights(data.features?.items || []);
+      })
+      .catch(error => {
+        console.error('Error loading home.json:', error);
+        // Fallback content if JSON fails to load
+        renderFallbackContent();
+      });
+    
+    // Typewriter effect
+    function initTypewriter() {
+      // Load typewriter config
+      fetch('/openai/assets/data/typewriter-config.json')
+        .then(response => response.json())
+        .then(config => {
+          const typewriterConfig = config.typewriter;
+          startTypewriter(typewriterConfig.topics, typewriterConfig.settings);
+        })
+        .catch(error => {
+          console.error('Error loading typewriter config:', error);
+          // Fallback topics
+          const fallbackTopics = ['Text Models', 'Smart Models', 'Tool Integration'];
+          const fallbackSettings = { typingSpeed: 100, deletingSpeed: 50, pauseDuration: 2000, initialDelay: 1500 };
+          startTypewriter(fallbackTopics, fallbackSettings);
+        });
+    }
+    
+    function startTypewriter(topics, settings) {
+      const textElement = document.getElementById('typewriter-text');
+      const cursorElement = document.getElementById('typewriter-cursor');
+      
+      let topicIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let isPaused = false;
+      
+      function type() {
+        const currentTopic = topics[topicIndex];
+        
+        if (isPaused) {
+          setTimeout(type, settings.pauseDuration);
+          isPaused = false;
+          return;
+        }
+        
+        if (!isDeleting && charIndex < currentTopic.length) {
+          // Typing
+          textElement.textContent = currentTopic.substring(0, charIndex + 1);
+          charIndex++;
+          setTimeout(type, settings.typingSpeed);
+        } else if (isDeleting && charIndex > 0) {
+          // Deleting
+          textElement.textContent = currentTopic.substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(type, settings.deletingSpeed);
+        } else if (!isDeleting && charIndex === currentTopic.length) {
+          // Pause before deleting
+          isPaused = true;
+          isDeleting = true;
+          setTimeout(type, settings.pauseDuration);
+        } else if (isDeleting && charIndex === 0) {
+          // Move to next topic
+          isDeleting = false;
+          topicIndex = (topicIndex + 1) % topics.length;
+          setTimeout(type, settings.typingSpeed);
+        }
+      }
+      
+      // Start after initial delay
+      setTimeout(type, settings.initialDelay);
+    }
+    
+    // Add intersection observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    // Function to render feature cards
+    function renderFeatureCards(cards) {
+      const grid = document.getElementById('features-grid');
+      grid.innerHTML = cards.map((card, index) => `
+        <div class="feature-card" style="opacity: 0; transform: translateY(20px); transition-delay: ${index * 0.1}s;">
+          <div class="feature-icon">${card.icon}</div>
+          <h3 class="feature-title">${card.title}</h3>
+          <p class="feature-description">${card.description}</p>
+          <a href="${card.link}" class="feature-link">Learn more →</a>
+        </div>
+      `).join('');
+      
+      // Observe cards for animation
+      grid.querySelectorAll('.feature-card').forEach(card => {
+        observer.observe(card);
+      });
+    }
+    
+    // Function to render highlights
+    function renderHighlights(items) {
+      const grid = document.getElementById('highlights-grid');
+      grid.innerHTML = items.map(item => `
+        <div class="highlight-item">
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </div>
+      `).join('');
+    }
+    
+    // Fallback content if JSON loading fails
+    function renderFallbackContent() {
+      const fallbackCards = [
+        { icon: '🚀', title: 'Quickstart', description: 'Get started with OpenAI APIs', link: '/openai/1-quickstart/' },
+        { icon: '🤖', title: 'Model Inference', description: 'Learn prompting and model interaction', link: '/openai/2-model-inference/' },
+        { icon: '🧰', title: 'Model Customization', description: 'Fine-tune and customize models', link: '/openai/3-model-customization/' }
+      ];
+      
+      const fallbackHighlights = [
+        { title: 'Easy to Learn', description: 'Step-by-step tutorials' },
+        { title: 'Extend & Learn', description: 'Best practices included' },
+        { title: 'Experiment & Discover', description: 'Latest features covered' }
+      ];
+      
+      renderFeatureCards(fallbackCards);
+      renderHighlights(fallbackHighlights);
+    }
+  });
+</script>
+{% endblock %}
