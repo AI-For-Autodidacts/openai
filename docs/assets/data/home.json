@@ -6,12 +6,12 @@
     "buttons": [
       {
         "text": "Get Started",
-        "url": "/getting-started/quick-start/",
+        "url": "1-quickstart/",
         "type": "primary"
       },
       {
         "text": "View Examples",
-        "url": "/examples/basic/",
+        "url": "2-model-inference/",
         "type": "secondary"
       }
     ],
@@ -22,46 +22,46 @@
   },
   "cards": [
     {
-      "title": "Quick Start Guide",
+      "title": "Quickstart",
       "description": "Get up and running with OpenAI APIs in minutes. Learn the basics with simple, practical examples.",
       "icon": "🚀",
-      "link": "/getting-started/quick-start/",
-      "category": "getting-started"
+      "link": "1-quickstart/",
+      "category": "quickstart"
     },
     {
-      "title": "API Reference",
-      "description": "Complete documentation for all OpenAI endpoints, authentication, and best practices.",
-      "icon": "📚",
-      "link": "/api/overview/",
-      "category": "reference"
+      "title": "Model Inference",
+      "description": "Master the art of prompting and interacting with OpenAI models for optimal performance.",
+      "icon": "🤖",
+      "link": "2-model-inference/",
+      "category": "inference"
     },
     {
-      "title": "Code Examples",
-      "description": "Real-world examples and code snippets you can copy, paste, and adapt for your projects.",
-      "icon": "💻",
-      "link": "/examples/basic/",
-      "category": "examples"
+      "title": "Model Customization",
+      "description": "Fine-tune and customize models for your specific use cases and domain requirements.",
+      "icon": "🧰",
+      "link": "3-model-customization/",
+      "category": "customization"
     },
     {
-      "title": "Best Practices",
-      "description": "Learn proven strategies for prompt engineering, error handling, and performance optimization.",
-      "icon": "⭐",
-      "link": "/guides/best-practices/",
-      "category": "guides"
+      "title": "Model Evaluation",
+      "description": "Learn comprehensive techniques to measure and improve model performance and safety.",
+      "icon": "📊",
+      "link": "4-model-evaluation/",
+      "category": "evaluation"
     },
     {
-      "title": "Developer Tools",
-      "description": "Essential tools and utilities to streamline your AI development workflow.",
-      "icon": "🛠️",
-      "link": "/guides/developer-guide/",
-      "category": "tools"
+      "title": "Agentic AI",
+      "description": "Build autonomous AI agents that can reason, plan, and take action independently.",
+      "icon": "🎯",
+      "link": "5-agentic-ai/",
+      "category": "agents"
     },
     {
-      "title": "Community",
-      "description": "Join our community of AI developers. Share ideas, get help, and collaborate on projects.",
-      "icon": "👥",
-      "link": "/about/contributing/",
-      "category": "community"
+      "title": "Advanced Topics",
+      "description": "Explore cutting-edge research, experimental techniques, and emerging AI technologies.",
+      "icon": "👩🏽‍💻",
+      "link": "6-advanced-topics/",
+      "category": "advanced"
     }
   ],
   "features": {

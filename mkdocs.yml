@@ -11,11 +11,10 @@ theme:
   name: material
   custom_dir: docs/overrides
   features:
-    - navigation.instant    # Faster page loading
-    - navigation.instant.prefetch  # Prefetch pages
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tabs
     - navigation.tabs.sticky
-
     - navigation.sections
     - navigation.expand
     - navigation.path
@@ -33,7 +32,6 @@ theme:
     - announce.dismiss
   language: en
   
-  # Color palette - Microsoft brand colors matching hero section
   palette:
     - scheme: default
       primary: custom
@@ -50,114 +48,57 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-  # Typography - Optimized font loading
   font:
     text: Inter
     code: JetBrains Mono
 
-  # Logo
-  logo: assets/logo.svg
-
-  # Custom icon
   icon:
     repo: fontawesome/brands/github
-    edit: material/pencil 
-    view: material/eye
-    admonition:
-      note: octicons/tag-16
-      abstract: octicons/checklist-16
-      info: octicons/info-16
-      tip: octicons/squirrel-16
-      success: octicons/check-16
-      question: octicons/question-16
-      warning: octicons/alert-16
-      failure: octicons/x-circle-16
-      danger: octicons/zap-16
-      bug: octicons/bug-16
-      example: octicons/beaker-16
-      quote: octicons/quote-16
 
-# Plugins
 plugins:
-  - search:
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - search
 
-# Customization
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/yourusername/openai
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/yourusername
-  generator: false  # Remove "Made with Material for MkDocs"
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX
+  generator: false
 
-# Extensions
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - md_in_html
   - admonition
   - pymdownx.details
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
   - def_list
   - footnotes
   - tables
   - toc:
       permalink: true
 
-# Extra CSS and JavaScript
 extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/extra.js
 
-# Copyright
 copyright: Copyright &copy; 2025 Nitya Narasimhan
 
-# Navigation
 nav:
   - Home: index.md
-  - Getting Started:
-    - Installation: getting-started/installation.md
-    - Quick Start: getting-started/quick-start.md
-    - Configuration: getting-started/configuration.md
-  - Guides:
-    - User Guide: guides/user-guide.md
-    - Developer Guide: guides/developer-guide.md
-    - Best Practices: guides/best-practices.md
-  - API Reference:
-    - Overview: api/overview.md
-    - Authentication: api/authentication.md
-    - Endpoints: api/endpoints.md
-  - Examples:
-    - Basic Examples: examples/basic.md
-    - Advanced Examples: examples/advanced.md
-  - About:
-    - Changelog: about/changelog.md
-    - Contributing: about/contributing.md
-    - License: about/license.md
+  - Quickstart:
+    - Overview: 1-quickstart/index.md
+  - Inference:
+    - Overview: 2-model-inference/index.md
+  - Customization:
+    - Overview: 3-model-customization/index.md
+  - Evaluation:
+    - Overview: 4-model-evaluation/index.md
+  - Agentic AI:
+    - Overview: 5-agentic-ai/index.md
+  - Advanced Topics:
+    - Overview: 6-advanced-topics/index.md
